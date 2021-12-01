@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;SpMVC_00_Hello&apos;&#x0D;&#x0A;- Original project: &apos;SpMVC_00_Hello&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     classes&#x0D;&#x0A;     spring&#x0D;&#x0A;     views&#x0D;&#x0A;     web.xml" description="Delete elements" element1="src/main/webapp/WEB-INF/classes" element2="src/main/webapp/WEB-INF/web.xml" element3="src/main/webapp/WEB-INF/views" element4="src/main/webapp/WEB-INF/spring" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="4" stamp="1638322353316" subPackages="false" version="1.0"/>
+</session>
