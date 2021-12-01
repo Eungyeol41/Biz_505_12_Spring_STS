@@ -1,3 +1,0 @@
-#Tomcat publish data
-#Wed Dec 01 13:41:04 KST 2021
-org.eclipse.jst.jee.server\:/binary\:C\:\\Users\\403\\.gradle\\caches\\modules-2\\files-2.1\\org.springframework\\spring-web\\5.2.18.RELEASE\\92f5fde362654fae46bd50bd6c541791e897bf71\\spring-web-5.2.18.RELEASE.jar=WEB-INF/lib/spring-web-5.2.18.RELEASE.jar
