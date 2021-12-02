@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--
+	CommonsMultipartResolver를 설정해두면 
+		file을 업로드할 때 background에서 spring framework를 도와서 기능이 수행된다
+	중요: 업로드할 파일의 크기를 제한하는 속성을 지정해야 한다.
+	
+	maxUploadSizePerFile: 파일 1개의 크기(용량, 사이즈)
+	maxUploadSize: 여러 개의 파일일 때 전체 크기 
+	
+	PerFile의 크기를 설정하고
+	파일 개수를 몇 개까지 업로드 할 지를 계산하여
+	`Size = PerFile * 개수` 형식으로 계산하여 설정하기
+	
+	1K = 1024
+	1M = 1024 * 1024 = 1,048,576 (.=. 1,000,000)
+	1개의 파일 최대 크기를 2M로 하고싶다!! (.=. 2,000,000)
+	최대 2M 파일을 10개까지 제한하고 싶다!! 2M * 10 (.=. 20,000,000)
+	
+	- file Bump 공격
+	업로드 가능 크기를 너무 크게하면 고용량 파일을 전송하고 서버를 멈추게 할 수 있다.
+	
+	-->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSizePerFile" value="2000000" />
+		<property name="maxUploadSize" value="20000000" />
+	</bean>
+
+</beans>
