@@ -7,10 +7,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Home</title>
+<title>나의 TODOLIST</title>
+<link href="${rootPath}/static/css/todolist.css?ver=2021-12-03-002" rel="stylesheet" />
+<link href="${rootPath}/static/css/todoInput.css?ver=2021-12-03-002" rel="stylesheet" />
+<link href="${rootPath}/static/css/todoItem.css?ver=2021-12-03-002" rel="stylesheet" />
 </head>
 <body>
-	<h1>나의 홈페이지</h1>
-	<a href="${rootPath}/file">파일업로드</a>
+	<main class="todo-list-template">
+		<div class="title">TODOLIST</div>
+		<section class="form-wrapper">입력창</section>
+		<%@ include file="/WEB-INF/views/todoInput.jsp" %>
+		<section class="todos-wrapper">
+			<%@ include file="/WEB-INF/views/todoList.jsp" %>
+		</section>
+	</main>
 </body>
 </html>
