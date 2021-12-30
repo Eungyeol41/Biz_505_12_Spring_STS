@@ -15,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.callor.todo.service.FileServiceABS;
 import com.callor.todo.config.QualifierConfig;
-import com.callor.todo.model.TodoVO;
+//import com.callor.todo.model.TodoVO;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -23,7 +23,7 @@ import lombok.extern.slf4j.Slf4j;
 @Controller
 public class HomeController {
 	
-	private final List<TodoVO> todoList = new ArrayList<TodoVO>();
+//	private final List<TodoVO> todoList = new ArrayList<TodoVO>();
 	
 	private final FileServiceABS fileService;
 	public HomeController(FileServiceABS fileService) {
@@ -41,14 +41,14 @@ public class HomeController {
 
 		Map<String, String> retFileName =fileService.fileUp(to_image); 
 		
-		TodoVO vo = TodoVO.builder()
-			.to_text(to_text)
-			.to_sImage(retFileName.get(QualifierConfig.FILE_SERVICE.SAVENAME))
-			.build();
+//		TodoVO vo = TodoVO.builder()
+//			.to_text(to_text)
+//			.to_sImage(retFileName.get(QualifierConfig.FILE_SERVICE.SAVENAME))
+//			.build();
+//		
+//		todoList.add(vo);
 		
-		todoList.add(vo);
-		
-		model.addAttribute("TODOLIST", todoList);
+//		model.addAttribute("TODOLIST", todoList);
 		model.addAttribute("IMAGES", retFileName);
 		
 		log.debug("TODO: {}", to_text);
@@ -77,6 +77,7 @@ public class HomeController {
 	 *		@ModelAttribute를 부착하여 데이터를 수신하려면 
 	 *			VO(DTO) 클래스에 반드시 Getter, Setter, 필드 생성자(@AllArgsConstructor)가 있어야 한다. 
 	 */
+	/*
 	@ResponseBody
 	@RequestMapping(value = "/upload", method = RequestMethod.POST)
 	public Map<String, String> upload(@ModelAttribute TodoVO todoVO , @RequestParam("to_image") MultipartFile to_image)  {
@@ -88,5 +89,6 @@ public class HomeController {
 		
 		return retName;
 	}
+	*/
 
 }
